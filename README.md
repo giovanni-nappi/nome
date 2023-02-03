@@ -1,4 +1,15 @@
-# My dotfile repo
+# My dotfiles repo
+
+## Start
+1. Install `nix` package
+2. Enable flakes, by creating the file `~/.config/nix/nix.conf ` with content:
+```
+experimental-features = nix-command flakes
+```
+3. Then: launch:
+```sh
+nix build "github:giovanni-nappi/dotfiles#homeConfigurations.giovanni.activationPackage" && ./result/activate
+```
 
 <!-- https://www.conventionalcommits.org/ -->
 
@@ -7,6 +18,7 @@
 -->
 
 <!--
+list of packages installed on my laptop at the moment (pacman -Qe | awk '{print $1}')
 abook
 accountsservice
 acpi
