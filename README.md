@@ -13,7 +13,7 @@ experimental-features = nix-command flakes
 ```
 3. Build and activate:
 ```sh
-nix build "github:giovanni-nappi/dotfiles#homeConfigurations.giovanni.activationPackage" && ./result/activate
+nix build "github:giovanni-nappi/nome#homeConfigurations.giovanni.activationPackage" && ./result/activate
 ```
 4. When you modify your home, launch:
 ```sh

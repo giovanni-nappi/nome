@@ -15,6 +15,18 @@
     enableAliases = true;
   };
 
+  # Fuzzy finder
+  fzf = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  # Distributed version control
+  git = (import ./git.nix { inherit homeDirectory pkgs; });
+
+  # GPG config
+  gpg.enable = true;
+
   # Configure HM itself
   home-manager.enable = true;
 
@@ -29,15 +41,8 @@
   # Kubernetes CLI
   k9s.enable = true;
 
-  # Fuzzy finder
-  fzf = {
-    enable = true;
-    enableZshIntegration = true;
-  };
+  # TODO: nvim
 
-  # Distributed version control
-  git = (import ./git.nix { inherit homeDirectory pkgs; });
+  # TODO: tmux
 
-  # GPG config
-  gpg.enable = true;
 }
