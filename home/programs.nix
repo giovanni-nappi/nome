@@ -35,6 +35,9 @@
     enableZshIntegration = true;
   };
 
-  # But of course
+  # Distributed version control
   git = (import ./git.nix { inherit homeDirectory pkgs; });
+
+  # GPG config
+  gpg.enable = true;
 }

@@ -1,5 +1,7 @@
 # My dotfiles repo
 
+Heavily inspired by Luc Perkins' [nome](https://github.com/the-nix-way/nome).
+
 ## Start
 1. Install `nix` package:
 ```sh
