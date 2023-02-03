@@ -1,21 +1,23 @@
 # My dotfiles repo
 
 ## Start
-1. Install `nix` package
+1. Install `nix` package:
+```sh
+sh <(curl -L https://nixos.org/nix/install) --daemon
+```
 2. Enable flakes, by creating the file `~/.config/nix/nix.conf ` with content:
 ```
 experimental-features = nix-command flakes
 ```
-3. Then: launch:
+3. Build and activate:
 ```sh
 nix build "github:giovanni-nappi/dotfiles#homeConfigurations.giovanni.activationPackage" && ./result/activate
 ```
-
+4. When you modify your home, launch:
+```sh
+home-manager switch --flake .#giovanni
+```
 <!-- https://www.conventionalcommits.org/ -->
-
-<!--
-```home-manager switch --flake .#giovanni```
--->
 
 <!--
 list of packages installed on my laptop at the moment (pacman -Qe | awk '{print $1}')

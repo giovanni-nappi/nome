@@ -15,5 +15,6 @@ in {
     };
   };
 
-  programs = import ./programs.nix;
+  # Configurations for programs directly supported by Home Manager
+  programs = import ./programs.nix { inherit homeDirectory pkgs; };
 }

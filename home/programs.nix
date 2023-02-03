@@ -1,3 +1,7 @@
+{ homeDirectory
+, pkgs
+}:
+
 {
   # Fancy replacement for cat
   bat.enable = true;
@@ -25,4 +29,12 @@
   # Kubernetes CLI
   k9s.enable = true;
 
+  # Fuzzy finder
+  fzf = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  # But of course
+  git = (import ./git.nix { inherit homeDirectory pkgs; });
 }
