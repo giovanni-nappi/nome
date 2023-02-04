@@ -44,6 +44,7 @@ in
   '')
 
   (script "nix-clean" ''
+    home-manager expire-generations "-7 days" && \
     nix-env --delete-generations old && \
     nix-store --gc
   '')

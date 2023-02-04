@@ -10,6 +10,10 @@ in {
   home = {
     inherit homeDirectory packages stateVersion username;
 
+    file."./.config/nvim/" = {
+      source = ./nvim;
+    };
+
     shellAliases = {
       reload-home-manager-config = "home-manager switch --flake ${builtins.toString ./.}";
     };

@@ -41,7 +41,8 @@
   # Kubernetes CLI
   k9s.enable = true;
 
-  # TODO: nvim
+  # Neovim
+  neovim = (import ./nvim { inherit homeDirectory pkgs; });
 
   # TODO: tmux
 
