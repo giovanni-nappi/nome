@@ -44,6 +44,7 @@
   # Neovim
   neovim = (import ./nvim { inherit homeDirectory pkgs; });
 
-  # TODO: tmux
+  # Terminal multiplexer
+  tmux = (import ./tmux.nix { inherit pkgs; });
 
 }
