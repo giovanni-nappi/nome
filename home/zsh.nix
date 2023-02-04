@@ -4,6 +4,7 @@
   enable = true;
   enableAutosuggestions = true;
   enableCompletion = true;
+  enableSyntaxHighlighting = true;
   autocd = true;
   shellAliases = (import ./aliases.nix { inherit homeDirectory; }).shell;
 
