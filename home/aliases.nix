@@ -22,4 +22,31 @@
     wipe = "commit -s";
     fix = "rebase --exec 'git commit --amend --no-edit -S' -i origin/develop";
   };
+
+  shell = {
+    # General
+    cat = "bat";
+    cfg = "nvim ~/nome/flake.nix";
+    dc = "docker compose";
+    diff = "diff --color=auto";
+    grep = "grep --color=auto";
+    szsh = "source ~/.zshrc";
+
+    # kubectl
+    k = "kubectl";
+    kx = "kubectx";
+
+    ## Nix stuff. Inspired by: https://alexfedoseev.com/blog/post/nix-time.
+
+    # Reload the Home Manager configuration (after git push)
+    xx =
+      "home-manager switch --flake github:giovanni-nappi/nome && source ${homeDirectory}/.zshrc";
+
+    # Run Nix garbage collection
+    xgc = "nix-env --delete-generations old && nix-store --gc";
+
+    # Nix flake helpers
+    nfs = "nix flake show";
+    nfu = "nix flake update";
+  };
 }

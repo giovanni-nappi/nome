@@ -55,9 +55,5 @@ in
     readlink $(which $1)
   '')
 
-  (script "cfg" ''
-    nvim ${homeDirectory}/nome/flake.nix
-  '')
-
   # TODO vagrant / virtualbox clean
 ]
