@@ -10,6 +10,11 @@ in {
   home = {
     inherit homeDirectory packages stateVersion username;
 
+    sessionVariables = {
+      EDITOR = "nvim";
+      ZK_NOTEBOOK_DIR = "${homeDirectory}/cabinet/notes";
+    };
+
     file."./.config/nvim/" = {
       source = ./nvim;
     };
