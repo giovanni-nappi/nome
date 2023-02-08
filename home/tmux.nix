@@ -1,15 +1,18 @@
 { pkgs }:
 {
   enable = true;
+
   clock24 = true;
-  escapeTime = 10;
   baseIndex = 1;
+  escapeTime = 0;
   keyMode = "vi";
+  newSession = false;
   shortcut = "a";
 
   plugins = with pkgs.tmuxPlugins; [
-    cpu
-    # tmux-sensible
+    extrakto
+    nord
+    sessionist
     vim-tmux-navigator
   ];
 
@@ -19,8 +22,5 @@
 
     # Fix System Clipboard
     set -g default-shell $SHELL
-
-    # Theme
-    set -g @themepack 'block/yellow'
   '';
 }
