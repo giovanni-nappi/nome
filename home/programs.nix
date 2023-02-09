@@ -42,7 +42,7 @@
   k9s.enable = true;
 
   # Neovim
-  neovim = import ./nvim { inherit homeDirectory pkgs; };
+  neovim = (import ./neovim.nix).program;
 
   # Terminal multiplexer
   tmux = import ./tmux.nix { inherit pkgs; };

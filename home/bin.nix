@@ -55,5 +55,5 @@ in
     readlink $(which $1)
   '')
 
-  # TODO vagrant / virtualbox clean
+  # TODO virtualbox clean
 ]
