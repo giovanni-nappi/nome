@@ -16,7 +16,7 @@
     };
 
     # symlink neovim lua files in ~/.config/nvim/
-    file = (import ./neovim.nix { inherit pkgs; }).luaFiles;
+    # file = (import ./neovim.nix { inherit pkgs; }).luaFiles;
 
   };
 
