@@ -1,48 +1,43 @@
 { pkgs }:
 {
-  program = {
-    enable = true;
+  enable = true;
 
-    viAlias = true;
-    vimAlias = true;
-    vimdiffAlias = true;
+  viAlias = true;
+  vimAlias = true;
+  vimdiffAlias = true;
 
-    #plugins = with pkgs.vimPlugins; [
-      #{
-      #  plugins = alpha-nvim;
-      #  type = "lua";
-      #  config = ''
-      #    require("plugins.alpha")
-      #  '';
-      #}
-    #];
+  defaultEditor = true;
 
-    # extraLuaConfig = ''
-    #   -- References to ./lua/
+  plugins = with pkgs.vimPlugins; [
+    { plugin = nvim-autopairs;
+      config = '' require("plugins.autopairs") '';
+      type = "lua";
+    }
+    nvim-navic
+    { plugin = which-key-nvim;
+      config = '' require("plugins.which-key") '';
+      type = "lua";
+    }
+  ];
 
-     #  -- Remap space as leader key
-      # vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
-     #  vim.g.mapleader = " "
+  extraLuaConfig = ''
+    -- References to ./lua/
 
-      # -- Load global functions
-      # require("core.globals")
-      # -- Plugin management via lazy
-      # require("core.lazy")
-      # -- "Global" Keymappings
-      # require("core.mappings")
-      # -- All non plugin related (vim) options
-      # require("core.options")
-      # -- Vim autocommands/autogroups
-      # require("core.autocmd")
+    -- Remap space as leader key
+    vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
+    vim.g.mapleader = " "
 
-    # '';
-  };
+    -- Load global functions
+    require("core.globals")
+    -- Plugin management via lazy
+    -- require("core.lazy")
+    -- "Global" Keymappings
+    require("core.mappings")
+    -- All non plugin related (vim) options
+    require("core.options")
+    -- Vim autocommands/autogroups
+    require("core.autocmd")
 
-  luaFiles = {
-    ".config/nvim" = {
-      recursive = true;
-      source = ../config/nvim;
-    };
-  };
+  '';
 
 }

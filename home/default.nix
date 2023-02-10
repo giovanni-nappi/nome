@@ -11,12 +11,17 @@
     packages = import ./packages.nix { inherit homeDirectory pkgs; };
 
     sessionVariables = {
-      EDITOR = "nvim";
       ZK_NOTEBOOK_DIR = "${homeDirectory}/cabinet/notes";
     };
 
     # symlink neovim lua files in ~/.config/nvim/
     # file = (import ./neovim.nix { inherit pkgs; }).luaFiles;
+    file = {
+      ".config/nvim" = {
+        recursive = true;
+        source = ../config/nvim;
+      };
+    };
 
   };
 
