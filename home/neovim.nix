@@ -18,6 +18,10 @@
       config = '' require("plugins.gitsigns") '';
       type = "lua";
     }
+    { plugin = mini-nvim;
+      config = '' require("plugins.mini") '';
+      type = "lua";
+    }
     { plugin = neo-tree-nvim;
       config = '' require("plugins.neo-tree") '';
       type = "lua";
