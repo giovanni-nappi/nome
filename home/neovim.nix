@@ -14,8 +14,16 @@
       type = "lua";
     }
     bufdelete-nvim
+    { plugin = gitsigns-nvim;
+      config = '' require("plugins.gitsigns") '';
+      type = "lua";
+    }
     { plugin = neo-tree-nvim;
       config = '' require("plugins.neo-tree") '';
+      type = "lua";
+    }
+    { plugin = neogit;
+      config = '' require("plugins.neogit") '';
       type = "lua";
     }
     { plugin = nvim-autopairs;
@@ -25,7 +33,7 @@
     nui-nvim # neo-tree dep
     nvim-navic # which-key dep
     nvim-web-devicons # alpha-nvim, neo-tree dep
-    plenary-nvim # alpha-nvim, neo-tree dep
+    plenary-nvim # alpha-nvim, gitsigns, neogit, neo-tree dep
     { plugin = which-key-nvim;
       config = '' require("plugins.which-key") '';
       type = "lua";
@@ -46,6 +54,7 @@
       config = '' require("plugins.tokyonight") '';
       type = "lua";
     }
+    vim-fugitive
     vim-nix
   ];
 
