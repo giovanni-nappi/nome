@@ -13,6 +13,7 @@
       config = '' require("plugins.alpha.alpha") '';
       type = "lua";
     }
+    bufdelete-nvim
     nvim-web-devicons # alpha-nvim dep
     { plugin = nvim-autopairs;
       config = '' require("plugins.autopairs") '';
