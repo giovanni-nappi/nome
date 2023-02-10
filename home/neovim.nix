@@ -22,6 +22,10 @@
       config = '' require("plugins.mini") '';
       type = "lua";
     }
+    { plugin = Navigator-nvim;
+      config = '' require("plugins.navigator") '';
+      type = "lua";
+    }
     { plugin = neo-tree-nvim;
       config = '' require("plugins.neo-tree") '';
       type = "lua";
@@ -47,10 +51,6 @@
       config = '' require("plugins.project") '';
       type = "lua";
     }
-    { plugin = which-key-nvim;
-      config = '' require("plugins.which-key") '';
-      type = "lua";
-    }
     {
       plugin = telescope-nvim;
       config = '' require("plugins.telescope") '';
@@ -69,6 +69,10 @@
     }
     vim-fugitive
     vim-nix
+    { plugin = which-key-nvim;
+      config = '' require("plugins.which-key") '';
+      type = "lua";
+    }
     { plugin = zk-nvim;
       config = '' require("plugins.zk-nvim") '';
       type = "lua";
