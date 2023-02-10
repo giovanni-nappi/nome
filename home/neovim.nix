@@ -26,12 +26,17 @@
       config = '' require("plugins.neogit") '';
       type = "lua";
     }
+    { plugin = noice-nvim;
+      config = '' require("plugins.noice") '';
+      type = "lua";
+    }
     { plugin = nvim-autopairs;
       config = '' require("plugins.autopairs") '';
       type = "lua";
     }
-    nui-nvim # neo-tree dep
+    nui-nvim # neo-tree, noice dep
     nvim-navic # which-key dep
+    nvim-notify # noice dep
     nvim-web-devicons # alpha-nvim, neo-tree dep
     plenary-nvim # alpha-nvim, gitsigns, neogit, neo-tree dep
     { plugin = which-key-nvim;
