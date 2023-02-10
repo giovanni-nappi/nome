@@ -159,7 +159,7 @@ local buttons = {
     dashboard.button("r", "  Recent Files", ":Telescope oldfiles <CR>"),
     dashboard.button("e", "  New File", ":ene <BAR> startinsert <CR>"),
     dashboard.button("g", "  NeoGit", ":Neogit <CR>"),
-    dashboard.button("l", "  Lazy", ":Lazy check<CR>"),
+    --dashboard.button("l", "  Lazy", ":Lazy check<CR>"),
     dashboard.button("q", "  Quit", ":qa<CR>"),
   },
   position = "center",
@@ -168,8 +168,7 @@ local buttons = {
 local header = {
   type = "text",
   -- From https://gist.github.com/sRavioli/d6fb0a813b6affc171976b7dd09764d3
-  val = require("core.plugins.alpha.headers")["random"],
-  -- val = require("core.config.alpha.headers").banners.sharp,
+  val = require("plugins.alpha.headers")["random"],
   opts = {
     position = "center",
     hl = "AlphaHeader",

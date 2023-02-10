@@ -9,11 +9,17 @@
   defaultEditor = true;
 
   plugins = with pkgs.vimPlugins; [
+    { plugin = alpha-nvim;
+      config = '' require("plugins.alpha.alpha") '';
+      type = "lua";
+    }
+    nvim-web-devicons # alpha-nvim dep
     { plugin = nvim-autopairs;
       config = '' require("plugins.autopairs") '';
       type = "lua";
     }
-    nvim-navic
+    nvim-navic # which-key dep
+    plenary-nvim # alpha-nvim dep
     { plugin = which-key-nvim;
       config = '' require("plugins.which-key") '';
       type = "lua";
