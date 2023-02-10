@@ -25,6 +25,11 @@
       config = '' require("plugins.which-key") '';
       type = "lua";
     }
+    { plugin = tokyonight-nvim;
+      config = '' require("plugins.tokyonight") '';
+      type = "lua";
+    }
+    vim-nix
   ];
 
   extraLuaConfig = ''
