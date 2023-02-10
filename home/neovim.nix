@@ -43,6 +43,10 @@
     nvim-notify # noice dep
     nvim-web-devicons # alpha-nvim, neo-tree dep
     plenary-nvim # alpha-nvim, gitsigns, neogit, neo-tree dep
+    { plugin = project-nvim;
+      config = '' require("plugins.project") '';
+      type = "lua";
+    }
     { plugin = which-key-nvim;
       config = '' require("plugins.which-key") '';
       type = "lua";
@@ -65,6 +69,10 @@
     }
     vim-fugitive
     vim-nix
+    { plugin = zk-nvim;
+      config = '' require("plugins.zk-nvim") '';
+      type = "lua";
+    }
   ];
 
   extraLuaConfig = ''
