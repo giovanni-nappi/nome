@@ -25,6 +25,18 @@
       config = '' require("plugins.which-key") '';
       type = "lua";
     }
+    {
+      plugin = telescope-nvim;
+      config = '' require("plugins.telescope") '';
+      type = "lua";
+    }
+    telescope-nvim
+    telescope-file-browser-nvim
+    #telescope-heading-nvim
+    #telescope-makefile
+    telescope-symbols-nvim
+    telescope-ui-select-nvim
+    telescope-zoxide
     { plugin = tokyonight-nvim;
       config = '' require("plugins.tokyonight") '';
       type = "lua";
