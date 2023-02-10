@@ -1,3 +1,4 @@
+{ pkgs }:
 {
   program = {
     enable = true;
@@ -6,21 +7,34 @@
     vimAlias = true;
     vimdiffAlias = true;
 
-    extraConfig = ''
-      lua <<EOF
-        -- References to ./lua/
+    #plugins = with pkgs.vimPlugins; [
+      #{
+      #  plugins = alpha-nvim;
+      #  type = "lua";
+      #  config = ''
+      #    require("plugins.alpha")
+      #  '';
+      #}
+    #];
 
-        -- Load global functions
-        require("core.globals")
-        -- Plugin management via lazy
-        require("core.lazy")
-        -- "Global" Keymappings
-        require("core.mappings")
-        -- All non plugin related (vim) options
-        require("core.options")
-        -- Vim autocommands/autogroups
-        require("core.autocmd")
-      EOF
+    extraLuaConfig = ''
+      -- References to ./lua/
+
+      -- Remap space as leader key
+      vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
+      vim.g.mapleader = " "
+
+      -- Load global functions
+      require("core.globals")
+      -- Plugin management via lazy
+      require("core.lazy")
+      -- "Global" Keymappings
+      require("core.mappings")
+      -- All non plugin related (vim) options
+      require("core.options")
+      -- Vim autocommands/autogroups
+      require("core.autocmd")
+
     '';
   };
 

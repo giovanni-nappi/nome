@@ -15,11 +15,9 @@
       ZK_NOTEBOOK_DIR = "${homeDirectory}/cabinet/notes";
     };
 
-    file = (import ./neovim.nix).luaFiles;
+    # symlink neovim lua files in ~/.config/nvim/
+    file = (import ./neovim.nix { inherit pkgs; }).luaFiles;
 
-    shellAliases = {
-      reload-home-manager-config = "home-manager switch --flake ${builtins.toString ./.}";
-    };
   };
 
   # Configurations for programs directly supported by Home Manager
