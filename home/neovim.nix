@@ -14,13 +14,18 @@
       type = "lua";
     }
     bufdelete-nvim
-    nvim-web-devicons # alpha-nvim dep
+    { plugin = neo-tree-nvim;
+      config = '' require("plugins.neo-tree") '';
+      type = "lua";
+    }
     { plugin = nvim-autopairs;
       config = '' require("plugins.autopairs") '';
       type = "lua";
     }
+    nui-nvim # neo-tree dep
     nvim-navic # which-key dep
-    plenary-nvim # alpha-nvim dep
+    nvim-web-devicons # alpha-nvim, neo-tree dep
+    plenary-nvim # alpha-nvim, neo-tree dep
     { plugin = which-key-nvim;
       config = '' require("plugins.which-key") '';
       type = "lua";
