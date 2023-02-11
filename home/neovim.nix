@@ -29,6 +29,7 @@
       config = '' require("plugins.diffview") '';
       type = "lua";
     }
+    friendly-snippets
     { plugin = gitsigns-nvim;
       config = '' require("plugins.gitsigns") '';
       type = "lua";
