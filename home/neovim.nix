@@ -76,6 +76,10 @@
       config = '' require("plugins.todo-comments") '';
       type = "lua";
     }
+    { plugin = toggleterm-nvim;
+      config = '' require("plugins.toggleterm") '';
+      type = "lua";
+    }
     { plugin = tokyonight-nvim;
       config = '' require("plugins.tokyonight") '';
       type = "lua";
