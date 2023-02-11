@@ -55,7 +55,7 @@
     nvim-navic # which-key dep
     nvim-notify # noice dep
     nvim-web-devicons # alpha-nvim, diffview, neo-tree dep
-    plenary-nvim # alpha-nvim, diffview, gitsigns, neogit, neo-tree dep
+    plenary-nvim # alpha-nvim, diffview, gitsigns, neogit, neo-tree, todo-commetns dep
     { plugin = project-nvim;
       config = '' require("plugins.project") '';
       type = "lua";
@@ -72,6 +72,10 @@
     telescope-symbols-nvim
     telescope-ui-select-nvim
     telescope-zoxide
+    { plugin = todo-comments-nvim;
+      config = '' require("plugins.todo-comments") '';
+      type = "lua";
+    }
     { plugin = tokyonight-nvim;
       config = '' require("plugins.tokyonight") '';
       type = "lua";
