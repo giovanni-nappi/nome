@@ -14,6 +14,17 @@
       type = "lua";
     }
     bufdelete-nvim
+    { plugin = nvim-cmp;
+      config = '' require("plugins.cmp") '';
+      type = "lua";
+    }
+    cmp-nvim-lsp # nvim-cmp dep
+    cmp-buffer # nvim-cmp dep
+    cmp-path # nvim-cmp dep
+    cmp-cmdline # nvim-cmp dep
+    cmp-calc # nvim-cmp dep
+    cmp-rg # nvim-cmp dep
+    cmp-nvim-lsp-signature-help # nvim-cmp dep
     { plugin = diffview-nvim;
       config = '' require("plugins.diffview") '';
       type = "lua";
@@ -27,6 +38,7 @@
       type = "lua";
     }
     keymap-layer-nvim # hydra dep
+    lspkind-nvim # nvim-cmp dep
     { plugin = mini-nvim;
       config = '' require("plugins.mini") '';
       type = "lua";
