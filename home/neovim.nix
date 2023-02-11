@@ -18,6 +18,11 @@
       config = '' require("plugins.gitsigns") '';
       type = "lua";
     }
+    { plugin = hydra-nvim;
+      config = '' require("plugins.hydra.hydra") '';
+      type = "lua";
+    }
+    keymap-layer-nvim # hydra dep
     { plugin = mini-nvim;
       config = '' require("plugins.mini") '';
       type = "lua";
