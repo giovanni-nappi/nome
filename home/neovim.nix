@@ -64,6 +64,10 @@
       config = '' require("plugins.autopairs") '';
       type = "lua";
     }
+    { plugin = nvim-bqf;
+      config = '' require("plugins.bqf") '';
+      type = "lua";
+    }
     nui-nvim # neo-tree, noice dep
     nvim-navic # which-key dep
     nvim-notify # noice dep
