@@ -84,6 +84,10 @@
       config = '' require("plugins.tokyonight") '';
       type = "lua";
     }
+    { plugin = urlview-nvim;
+      config = '' require("plugins.urlview") '';
+      type = "lua";
+    }
     vim-fugitive
     vim-nix
     { plugin = which-key-nvim;
