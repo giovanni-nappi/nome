@@ -110,6 +110,10 @@
       config = '' require("plugins.project") '';
       type = "lua";
     }
+    { plugin = symbols-outline-nvim;
+      config = '' require("plugins.symbols-outline") '';
+      type = "lua";
+    }
     {
       plugin = telescope-nvim;
       config = '' require("plugins.telescope") '';
