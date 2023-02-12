@@ -1,5 +1,3 @@
-local M = {}
-
 local function configure()
   local dap_breakpoint = {
     error = {
@@ -47,8 +45,8 @@ local function configure_exts()
 end
 
 local function configure_debuggers()
-  require("core.plugins.dap.python").setup()
-  require("core.plugins.dap.go").setup()
+  require("plugins.dap.python").setup()
+  require("plugins.dap.go").setup()
 end
 
 local function create_mapping()
@@ -58,12 +56,8 @@ local function create_mapping()
   }, { prefix = "<leader>", mode = "n", { silent = true } })
 end
 
-function M.setup()
-  configure() -- Configuration
-  configure_exts() -- Extensions
-  configure_debuggers() -- Debugger
-  create_mapping() -- which-key mapping
-  require("core.plugins.hydra.dap") -- enable Hydra head
-end
-
-return M
+configure() -- Configuration
+configure_exts() -- Extensions
+configure_debuggers() -- Debugger
+create_mapping() -- which-key mapping
+require("plugins.hydra.dap") -- enable Hydra head

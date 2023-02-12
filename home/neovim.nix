@@ -78,7 +78,14 @@
       config = '' require("plugins.bqf") '';
       type = "lua";
     }
-    nvim-dap # nvim-metals dep
+    { plugin = nvim-dap; # nvim-metals dep
+      config = '' require("plugins.dap.dap") '';
+      type = "lua";
+    }
+    nvim-dap-python # nvim-dap dep
+    nvim-dap-go # nvim-dap dep
+    nvim-dap-ui # nvim-dap dep
+    nvim-dap-virtual-text # nvim-dap dep
     { plugin = nvim-lspconfig;
       config = '' require("plugins.lsp.lsp") '';
       type = "lua";
