@@ -11,15 +11,18 @@
     packages = import ./packages.nix { inherit homeDirectory pkgs; };
 
     sessionVariables = {
-      EDITOR = "nvim";
       ZK_NOTEBOOK_DIR = "${homeDirectory}/cabinet/notes";
     };
 
-    file = (import ./neovim.nix).luaFiles;
-
-    shellAliases = {
-      reload-home-manager-config = "home-manager switch --flake ${builtins.toString ./.}";
+    # symlink neovim lua files in ~/.config/nvim/
+    # file = (import ./neovim.nix { inherit pkgs; }).luaFiles;
+    file = {
+      ".config/nvim" = {
+        recursive = true;
+        source = ../config/nvim;
+      };
     };
+
   };
 
   # Configurations for programs directly supported by Home Manager

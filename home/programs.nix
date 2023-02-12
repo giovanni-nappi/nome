@@ -36,16 +36,19 @@
   # Kitty terminal emulator
   kitty = {
     enable = true;
+    theme = "Space Gray Eighties";
   };
 
   # Kubernetes CLI
   k9s.enable = true;
 
   # Neovim
-  neovim = (import ./neovim.nix).program;
+  neovim = import ./neovim.nix { inherit pkgs; };
 
   # Terminal multiplexer
   tmux = import ./tmux.nix { inherit pkgs; };
+
+  zoxide.enable = true;
 
   # Zsh
   zsh = import ./zsh.nix { inherit homeDirectory; };
