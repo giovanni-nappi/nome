@@ -64,6 +64,7 @@
       config = '' require("plugins.noice") '';
       type = "lua";
     }
+    nui-nvim # neo-tree, noice dep
     { plugin = nvim-autopairs;
       config = '' require("plugins.autopairs") '';
       type = "lua";
@@ -72,10 +73,17 @@
       config = '' require("plugins.bqf") '';
       type = "lua";
     }
-    nui-nvim # neo-tree, noice dep
     nvim-navic # which-key dep
     nvim-notify # noice dep
+    { plugin = nvim-treesitter;
+      config = '' require("plugins.treesitter") '';
+      type = "lua";
+    }
+    nvim-treesitter.withAllGrammars
+    nvim-treesitter-textobjects # nvim-treesitter dep
+    nvim-ts-autotag # nvim-treesitter dep
     nvim-web-devicons # alpha-nvim, diffview, neo-tree dep
+    playground # nvim-treesitter dep
     plenary-nvim # alpha-nvim, diffview, gitsigns, neogit, neo-tree, todo-commetns dep
     { plugin = project-nvim;
       config = '' require("plugins.project") '';
