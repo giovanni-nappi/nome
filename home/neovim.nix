@@ -43,7 +43,7 @@
       type = "lua";
     }
     keymap-layer-nvim # hydra dep
-    lspkind-nvim # nvim-cmp dep
+    lspkind-nvim # nvim-cmp, nvim-lspconfig dep
     { plugin = mini-nvim;
       config = '' require("plugins.mini") '';
       type = "lua";
@@ -56,12 +56,17 @@
       config = '' require("plugins.neo-tree") '';
       type = "lua";
     }
+    neodev-nvim # nvim-lspconfig dep
     { plugin = neogit;
       config = '' require("plugins.neogit") '';
       type = "lua";
     }
     { plugin = noice-nvim;
       config = '' require("plugins.noice") '';
+      type = "lua";
+    }
+    { plugin = null-ls-nvim;
+      config = '' require("plugins.lsp.null-ls") '';
       type = "lua";
     }
     nui-nvim # neo-tree, noice dep
@@ -71,6 +76,15 @@
     }
     { plugin = nvim-bqf;
       config = '' require("plugins.bqf") '';
+      type = "lua";
+    }
+    nvim-dap # nvim-metals dep
+    { plugin = nvim-lspconfig;
+      config = '' require("plugins.lsp.lsp") '';
+      type = "lua";
+    }
+    { plugin = nvim-metals;
+      config = '' require("plugins.nvim-metals") '';
       type = "lua";
     }
     nvim-navic # which-key dep
@@ -84,7 +98,7 @@
     nvim-ts-autotag # nvim-treesitter dep
     nvim-web-devicons # alpha-nvim, diffview, neo-tree dep
     playground # nvim-treesitter dep
-    plenary-nvim # alpha-nvim, diffview, gitsigns, neogit, neo-tree, todo-commetns dep
+    plenary-nvim # alpha-nvim, diffview, gitsigns, neogit, neo-tree, null-ls, nvim-metals, todo-commetns dep
     { plugin = project-nvim;
       config = '' require("plugins.project") '';
       type = "lua";
