@@ -36,6 +36,7 @@
   # Kitty terminal emulator
   kitty = {
     enable = true;
+    theme = "Space Gray Eighties";
   };
 
   # Kubernetes CLI
@@ -46,6 +47,8 @@
 
   # Terminal multiplexer
   tmux = import ./tmux.nix { inherit pkgs; };
+
+  zoxide.enable = true;
 
   # Zsh
   zsh = import ./zsh.nix { inherit homeDirectory; };

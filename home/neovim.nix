@@ -38,6 +38,10 @@
       config = '' require("plugins.hydra.hydra") '';
       type = "lua";
     }
+    { plugin = indent-blankline-nvim;
+      config = '' require("plugins.indent-blankline") '';
+      type = "lua";
+    }
     keymap-layer-nvim # hydra dep
     lspkind-nvim # nvim-cmp dep
     { plugin = mini-nvim;
