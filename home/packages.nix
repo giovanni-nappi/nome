@@ -4,6 +4,7 @@ let
   bin = import ./bin.nix { inherit homeDirectory pkgs; };
 
   misc = with pkgs; [
+    gopls
     powerline-fonts
     zk
   ];

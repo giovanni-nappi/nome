@@ -14,6 +14,7 @@ capabilities.textDocument.foldingRange = {
 local servers = {
   "bashls",
   "dockerls",
+  "gopls",
   "jsonls",
   "ltex",
   "marksman",
