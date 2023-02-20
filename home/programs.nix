@@ -48,7 +48,11 @@
   # Terminal multiplexer
   tmux = import ./tmux.nix { inherit pkgs; };
 
-  zoxide.enable = true;
+  # A smarter cd command
+  zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 
   # Zsh
   zsh = import ./zsh.nix { inherit homeDirectory; };

@@ -18,7 +18,7 @@ local servers = {
   "ltex",
   "marksman",
   "pyright",
-  "sumneko_lua",
+  "lua_ls",
   "terraformls",
   "texlab",
   "tsserver",
