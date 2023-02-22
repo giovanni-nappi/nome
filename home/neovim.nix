@@ -44,6 +44,7 @@
     }
     keymap-layer-nvim # hydra dep
     lspkind-nvim # nvim-cmp, nvim-lspconfig dep
+    luasnip # nvim-cmp dep
     { plugin = mini-nvim;
       config = '' require("plugins.mini") '';
       type = "lua";
