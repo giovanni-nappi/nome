@@ -1,0 +1,6 @@
+require("plugins.hydra.git")
+require("plugins.hydra.options")
+require("plugins.hydra.spelling")
+require("plugins.hydra.telescope")
+--require("plugins.hydra.dap")
+require("plugins.hydra.windows")
