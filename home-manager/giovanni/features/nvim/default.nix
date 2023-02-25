@@ -146,8 +146,8 @@
       }
       telescope-nvim
       telescope-file-browser-nvim
-      #telescope-heading-nvim
-      #telescope-makefile
+      telescope-heading-nvim
+      telescope-makefile
       telescope-symbols-nvim
       telescope-ui-select-nvim
       telescope-zoxide

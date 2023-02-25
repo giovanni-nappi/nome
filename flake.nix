@@ -3,8 +3,11 @@
 
   inputs = {
     # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-master.url = "github:nixos/nixpkgs/master";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs-master = {
+      url = "github:nixos/nixpkgs/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Also see the 'unstable-packages' overlay at 'overlays/default.nix'.
 
     # Home manager
