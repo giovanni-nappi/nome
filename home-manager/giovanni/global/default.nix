@@ -33,6 +33,11 @@
     home-manager.enable = true;
   };
 
+  fonts.fontconfig.enable = true;
+  home.packages = [
+    (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; })
+  ];
+
   home = {
     username = lib.mkDefault "giovanni";
     homeDirectory = lib.mkDefault "/home/${config.home.username}";
