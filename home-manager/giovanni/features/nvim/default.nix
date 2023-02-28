@@ -48,6 +48,8 @@
         config = '' require("plugins.gitsigns") '';
         type = "lua";
       }
+      # go-nvim
+      # guihua-lua # go-nvim dep
       { plugin = hydra-nvim;
         config = '' require("plugins.hydra.hydra") '';
         type = "lua";
@@ -102,7 +104,7 @@
       nvim-dap-go # nvim-dap dep
       nvim-dap-ui # nvim-dap dep
       nvim-dap-virtual-text # nvim-dap dep
-      { plugin = nvim-lspconfig;
+      { plugin = nvim-lspconfig; # go-nvim dep
         config = '' require("plugins.lsp.lsp") '';
         type = "lua";
       }
@@ -112,7 +114,7 @@
       }
       nvim-navic # which-key dep
       nvim-notify # noice dep
-      { plugin = nvim-treesitter;
+      { plugin = nvim-treesitter; # go-nvim dep
         config = '' require("plugins.treesitter") '';
         type = "lua";
       }
@@ -192,8 +194,6 @@
 
       -- Load global functions
       require("core.globals")
-      -- Plugin management via lazy
-      -- require("core.lazy")
       -- "Global" Keymappings
       require("core.mappings")
       -- All non plugin related (vim) options

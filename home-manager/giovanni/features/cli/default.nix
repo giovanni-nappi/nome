@@ -5,6 +5,7 @@
     ./exa.nix
     ./fzf.nix
     ./git.nix
+    ./go.nix
     ./kitty.nix
     ./tmux.nix
     ./zk.nix
@@ -18,9 +19,9 @@
     bc # Calculator
     bottom # System viewer
     fd # Better find
-    gopls
     powerline-fonts
     httpie # Better curl
+    k9s
     jq # JSON pretty printer and manipulator
     ncdu # TUI disk usage
     ripgrep # Better grep
