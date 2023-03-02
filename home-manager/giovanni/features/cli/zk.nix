@@ -5,7 +5,7 @@
       zk
     ];
     sessionVariables = {
-      ZK_NOTEBOOK_DIR = "/home/${config.home.username}";
+      ZK_NOTEBOOK_DIR = "/home/${config.home.username}/cabinet/notes";
     };
   };
 }
