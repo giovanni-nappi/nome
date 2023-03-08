@@ -114,7 +114,7 @@
       }
       nvim-navic # which-key dep
       nvim-notify # noice dep
-      { plugin = nvim-treesitter; # go-nvim dep
+      { plugin = nvim-treesitter; # go-nvim, treesj dep
         config = '' require("plugins.treesitter") '';
         type = "lua";
       }
@@ -153,6 +153,10 @@
       telescope-symbols-nvim
       telescope-ui-select-nvim
       telescope-zoxide
+      { plugin = treesj;
+        config = '' require("plugins.treesj") '';
+        type = "lua";
+      }
       { plugin = todo-comments-nvim;
         config = '' require("plugins.todo-comments") '';
         type = "lua";
