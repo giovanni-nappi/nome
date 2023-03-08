@@ -6,6 +6,7 @@
     ./fzf.nix
     ./git.nix
     ./go.nix
+    ./k8s.nix
     ./kitty.nix
     ./tmux.nix
     ./zk.nix
@@ -21,7 +22,6 @@
     fd # Better find
     powerline-fonts
     httpie # Better curl
-    k9s
     jq # JSON pretty printer and manipulator
     ncdu # TUI disk usage
     ripgrep # Better grep

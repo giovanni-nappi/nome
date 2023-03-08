@@ -1,4 +1,7 @@
 local ok, _ = pcall(require, "starlite")
+if not ok then
+  return
+end
 
 local map = vim.keymap.set
 local default_options = { silent = true }
