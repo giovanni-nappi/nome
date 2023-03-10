@@ -80,7 +80,6 @@ wk.register({
     d = { "<cmd>lua require('plugins.lsp.utils').toggle_virtual_text()<cr>", "Toggle Virtualtext" },
     l = { "<cmd>source ~/.config/nvim/snippets/*<cr>", "Reload snippets" },
     o = { "Options" },
-    p = { "<cmd>Lazy check<cr>", "Lazy check" },
     s = { "<cmd>SymbolsOutline<cr>", "Toggle SymbolsOutline" },
   },
   q = {
